@@ -28,6 +28,7 @@ def split_file(file, line, name, dir):
     p = file.rindex(".")
     ext = file[p:]
     files = []
+    no = 0
 
     for n in range(0, file_total):
         filename = ("%s.%d%s" % (name, n, ext))
@@ -43,6 +44,7 @@ def split_file(file, line, name, dir):
         if no == count:
             break
     move_file(dir,files)
+    print("successful")
 
 
 if __name__ == "__main__":
